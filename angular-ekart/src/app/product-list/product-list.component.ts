@@ -9,8 +9,15 @@ export class ProductListComponent {
 
   product= {
     name: "Iphone X",
-    price: 999,
+    price: 789,
     color: 'Red',
+    discount:8.5,
+    inStock: 5
+
+  }
+
+  getDiscountedPrice() {
+    return this.product.price - (this.product.price * this.product.discount / 100)
   }
 
   
